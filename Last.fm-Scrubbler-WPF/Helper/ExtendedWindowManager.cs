@@ -6,7 +6,7 @@ namespace Scrubbler.Helper
   /// Extended <see cref="WindowManager"/> with
   /// MessageBox, Open- and SaveFileDialog functionality.
   /// </summary>
-  public class ExtendedWindowManager : WindowManager, IExtendedWindowManager
+  public class ExtendedWindowManager : Caliburn.Micro.WindowManager, IExtendedWindowManager
   {
     #region Properties
 

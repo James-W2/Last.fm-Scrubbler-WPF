@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:beh="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="Configure CSV Parser" Height="325" Width="300" ResizeMode="NoResize" Loaded="Window_Loaded" >
 
@@ -67,11 +68,29 @@
     <TextBlock Grid.Row="17" Grid.Column="1" Text="Encoding:"/>
     <ComboBox Grid.Row="17" Grid.Column="3" ItemsSource="{Binding AvailableEncodings}" SelectedItem="{Binding SelectedEncoding}" DisplayMemberPath="EncodingName"/>
 
-    <Button x:Name="LoadDefaults" Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Content="Load Defaults" HorizontalAlignment="Right"/>
+    <Button Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Content="Load Defaults" HorizontalAlignment="Right">
+      <beh:Interaction.Triggers>
+        <beh:EventTrigger EventName="Click">
+          <beh:CallMethodAction TargetObject="{Binding}" MethodName="LoadDefaults"/>
+        </beh:EventTrigger>
+      </beh:Interaction.Triggers>
+    </Button>
 
     <StackPanel Grid.Row="21" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
-      <Button x:Name="SaveAndClose" Content="Save &amp; Close" HorizontalAlignment="Right" Margin="0,0,5,0"/>
-      <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Right"/>
+      <Button Content="Save &amp; Close" HorizontalAlignment="Right" Margin="0,0,5,0">
+        <beh:Interaction.Triggers>
+          <beh:EventTrigger EventName="Click">
+            <beh:CallMethodAction TargetObject="{Binding}" MethodName="SaveAndClose"/>
+          </beh:EventTrigger>
+        </beh:Interaction.Triggers>
+      </Button>
+      <Button Content="Cancel" HorizontalAlignment="Right">
+        <beh:Interaction.Triggers>
+          <beh:EventTrigger EventName="Click">
+            <beh:CallMethodAction TargetObject="{Binding}" MethodName="Cancel"/>
+          </beh:EventTrigger>
+        </beh:Interaction.Triggers>
+      </Button>
     </StackPanel>
   </Grid>
 </Window>

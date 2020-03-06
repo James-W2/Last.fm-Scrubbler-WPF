@@ -167,7 +167,9 @@ namespace Scrubbler
     /// </summary>
     public void ShowUserView()
     {
-      _windowManager.ShowDialog(UserViewModel);
+      WindowManager w = new WindowManager();
+      w.ShowDialog(UserViewModel);
+      //_windowManager.ShowDialog(UserViewModel);
     }
 
     #region Setup

@@ -34,7 +34,7 @@ namespace Scrubbler.Helper.FileParser
     /// <summary>
     /// WindowManager used to display dialogs.
     /// </summary>
-    private readonly IWindowManager _windowManager;
+    private readonly Caliburn.Micro.IWindowManager _windowManager;
 
     /// <summary>
     /// Parser used to parse .csv files.

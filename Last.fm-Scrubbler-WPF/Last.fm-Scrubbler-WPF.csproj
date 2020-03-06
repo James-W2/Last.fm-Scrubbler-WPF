@@ -216,6 +216,9 @@
     <Compile Include="Converters\EnumDescriptionConverter.cs" />
     <Compile Include="DelegateCommand.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="Helper\ChildWindow.xaml.cs">
+      <DependentUpon>ChildWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helper\FileParser\CSVFileParser.cs" />
     <Compile Include="Helper\FileParser\CSVFileParserViewModel.cs" />
     <Compile Include="Helper\FileParser\CustomContractResolver.cs" />
@@ -226,10 +229,13 @@
     <Compile Include="Helper\FileParser\IFileParser.cs" />
     <Compile Include="Helper\FileParser\JSONFileParser.cs" />
     <Compile Include="Helper\FileParser\JSONParserViewModel.cs" />
+    <Compile Include="Helper\IChildDisplay.cs" />
     <Compile Include="Helper\IHaveSettings.cs" />
     <Compile Include="Helper\FileParser\IFileParserFactory.cs" />
     <Compile Include="Helper\IProcessManager.cs" />
+    <Compile Include="Helper\IMyWindowManager.cs" />
     <Compile Include="Helper\ProcessManager.cs" />
+    <Compile Include="Helper\WindowManager.cs" />
     <Compile Include="Scrobbling\Data\ArtistResultViewModel.cs" />
     <Compile Include="Scrobbling\Data\FetchedArtistView.xaml.cs">
       <DependentUpon>FetchedArtistView.xaml</DependentUpon>
@@ -444,6 +450,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Configuration\NewVersionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helper\ChildWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

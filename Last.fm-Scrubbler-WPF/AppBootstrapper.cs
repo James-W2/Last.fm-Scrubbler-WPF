@@ -58,7 +58,7 @@ namespace Scrubbler
       MainViewModel mainVM = new MainViewModel(windowManager, client, scrobblerFactory, localFileFactory, fileOperator,
                                                directoryOperator, userSerializer, logger, gitHubClient, processManager, discogsClient, fileParserFactory);
 
-      windowManager.ShowWindow(new SystemTrayViewModel(windowManager, mainVM));
+      windowManager.ShowWindow(new SystemTrayViewModel(new Scrubbler.Helper.WindowManager(), mainVM));
     }
   }
 }

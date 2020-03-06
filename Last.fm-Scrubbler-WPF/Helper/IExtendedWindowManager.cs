@@ -5,7 +5,7 @@ namespace Scrubbler.Helper
   /// <summary>
   /// Service that manages windows and dialogs.
   /// </summary>
-  public interface IExtendedWindowManager : IWindowManager
+  public interface IExtendedWindowManager : Caliburn.Micro.IWindowManager
   {
     /// <summary>
     /// Service that manages an OpenFileDialog.
